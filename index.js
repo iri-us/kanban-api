@@ -13,5 +13,3 @@ routes(app);
 app.listen(PORT, () => {
     console.log(`Example app listening at http://localhost:${PORT}`)
 })
-
-//mongodb+srv://admin:123qwe@kanban.qwf0l.mongodb.net/kanban?retryWrites=true&w=majority

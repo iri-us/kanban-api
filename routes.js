@@ -1,3 +1,5 @@
+const cardCreate = require("./card/cardCreate");
+
 let cards = [
     {id: '1', name: 'First card', status: 'todo', priority: 2},
     {id: '2', name: 'Second card', status: 'progress', priority: 5},
@@ -9,12 +11,7 @@ function routes(app) {
         res.send('Hello World!')
     })
 
-    app.post('/card', (req, res) => {
-        console.log(req);
-        const card = req.body;
-        cards.push({id: Math.trunc(Math.random() * 100).toString(), ...card});
-        res.send('Card created');
-    })
+    app.post('/card', cardCreate)
 
     app.get('/card', (req, res) => {
         res.send(cards)
