@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const connectionString = 'mongodb+srv://admin:123qwe@kanban.qwf0l.mongodb.net/kanban?retryWrites=true&w=majority';
+const connectionString = process.env.MONGO_CONNECTION_STRING;
 
 const options = {
     useNewUrlParser: true,
